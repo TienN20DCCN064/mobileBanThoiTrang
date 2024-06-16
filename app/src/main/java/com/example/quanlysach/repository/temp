@@ -1,0 +1,92 @@
+
+    void getAllRole() {
+        RoleService roleService = ApiClient.getRetrofitInstance().create(RoleService.class);
+
+        roleService.getAll().enqueue(new Callback<List<Role>>() {
+            @Override
+            public void onResponse(Call<List<Role>> call, Response<List<Role>> response) {
+                String s = "";
+                for(Role item:response.body())
+                {
+                    s+= item.toString();
+                }
+//                Toast.makeText(TestActivity.this, s, Toast.LENGTH_SHORT).show();
+                tv.setText(s);
+            }
+
+            @Override
+            public void onFailure(Call<List<Role>> call, Throwable t) {
+                Toast.makeText(TestActivity.this, "error", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    void getRole(int idRole)
+    {
+        RoleService roleService = ApiClient.getRetrofitInstance().create(RoleService.class);
+        roleService.get(idRole).enqueue(new Callback<List<Role>>() {
+            @Override
+            public void onResponse(Call<List<Role>> call, Response<List<Role>> response) {
+                Role r = response.body().get(0);
+//                Toast.makeText(TestActivity.this, r.toString(), Toast.LENGTH_SHORT).show();
+                tv.setText(r.toString());
+            }
+
+            @Override
+            public void onFailure(Call<List<Role>> call, Throwable t) {
+                Toast.makeText(TestActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    void createRole(String name)
+    {
+        RoleService roleService = ApiClient.getRetrofitInstance().create(RoleService.class);
+        Role newRole = new Role(name);
+        roleService.create(newRole).enqueue(new Callback<Role>() {
+            @Override
+            public void onResponse(Call<Role> call, Response<Role> response) {
+                String s = response.body().toString();
+                tv.setText(s);
+                Toast.makeText(TestActivity.this, "POST succuss", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Role> call, Throwable t) {
+                Toast.makeText(TestActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    void updateRole( Role uRole)
+    {
+        RoleService roleService = ApiClient.getRetrofitInstance().create(RoleService.class);
+        roleService.update( uRole ).enqueue(new Callback<Role>() {
+            @Override
+            public void onResponse(Call<Role> call, Response<Role> response) {
+                String s = call.toString();
+                tv.setText(s);
+                Toast.makeText(TestActivity.this, "PUT SUCCESS", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Role> call, Throwable t) {
+                Toast.makeText(TestActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    void deleteRole(int id)
+    {
+        RoleService roleService = ApiClient.getRetrofitInstance().create(RoleService.class);
+        roleService.delete(id).enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                Toast.makeText(TestActivity.this, "DELETE Success", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(TestActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }

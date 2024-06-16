@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/round_grey">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:onClick="buttonClicked"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_home" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="  TRANG CHỦ"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textSize="30dp"
+            android:layout_marginStart="15dp"
+            android:text="Mặt Hàng: "
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listLoaiSanPham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="25dp"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="0"
+            android:layout_column="0">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_menu_item">
+                <ImageButton
+                    android:id="@+id/imageButton_menu00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_phu_kien_nam"/>
+
+                <TextView
+                    android:id="@+id/textView_menu00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageButton_menu00"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="ĐỒ NAM"
+
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="0"
+            android:layout_column="1">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_menu_item">
+                <ImageButton
+                    android:id="@+id/imageButton_menu01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_phu_kien_nu"/>
+
+                <TextView
+                    android:id="@+id/textView_menu01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageButton_menu01"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="ĐỒ NỮ"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="0"
+            android:layout_column="2">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_menu_item">
+                <ImageButton
+                    android:id="@+id/imageButton_menu02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_dong_ho"/>
+
+
+                <TextView
+                    android:id="@+id/textView_menu02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageButton_menu02"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="ĐỒNG HỒ"
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="1"
+            android:layout_column="0">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_menu_item">
+                <ImageButton
+                    android:id="@+id/imageButton_menu10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_tui_xach"/>
+
+                <TextView
+                    android:id="@+id/textView_menu10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageButton_menu10"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="TÚI XÁCH"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="1"
+            android:layout_column="1">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_menu_item">
+                <ImageButton
+
+                    android:id="@+id/imageButton_menu11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_trang_suc"/>
+
+                <TextView
+                    android:id="@+id/textView_menu11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageButton_menu11"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="TRANG SỨC"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_row="1"
+            android:layout_column="2">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_menu_item">
+                <ImageButton
+
+                    android:id="@+id/imageButton_menu12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_giay"/>
+
+                <TextView
+                    android:id="@+id/textView_menu12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageButton_menu12"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="GIÀỲ DÉP"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+            </RelativeLayout>
+        </RelativeLayout>
+<!--        <RelativeLayout-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_column="0">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@drawable/background_menu_item">-->
+<!--                <ImageButton-->
+
+<!--                    android:id="@+id/imageButton_menu20"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:layout_marginTop="11dp"-->
+<!--                    android:layout_marginStart="4dp"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/image_do_tre_em"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView_menu20"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/imageButton_menu20"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:text="ĐỒ TRẺ EM"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
+<!--            </RelativeLayout>-->
+<!--        </RelativeLayout>-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_column="1">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@drawable/background_menu_item">-->
+<!--                <ImageButton-->
+
+<!--                    android:id="@+id/imageButton_menu21"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:layout_marginTop="11dp"-->
+<!--                    android:layout_marginStart="4dp"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/image_gio_hang"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView_menu21"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/imageButton_menu21"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:text="Your Text"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
+<!--            </RelativeLayout>-->
+<!--        </RelativeLayout>-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="120dp"-->
+<!--            android:layout_height="120dp"-->
+<!--            android:layout_row="2"-->
+<!--            android:layout_column="2">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="120dp"-->
+<!--                android:layout_height="120dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@drawable/background_menu_item">-->
+<!--                <ImageButton-->
+
+<!--                    android:id="@+id/imageButton_menu22"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:layout_marginTop="11dp"-->
+<!--                    android:layout_marginStart="4dp"-->
+<!--                    android:layout_marginEnd="4dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/image_menu1"/>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/textView_menu22"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/imageButton_menu22"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:text="Your Text"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
+<!--            </RelativeLayout>-->
+<!--        </RelativeLayout>-->
+
+
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="290dp">
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp">
+
+            <ImageButton
+                android:id="@+id/imageButton_menuDayDu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/day_du" />
+
+            <TextView
+                android:id="@+id/textView_menuDayDu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageButton_menuDayDu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="Xem đầy đủ:"
+                android:textStyle="bold"
+
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background_menu">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="35dp"
+                android:background="@null"
+                android:onClick="buttonClicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_home" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/search_icon"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+            <ImageButton
+                android:id="@+id/btnGioHang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/image_gio_hang"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+            <ImageButton
+                android:id="@+id/btnInformation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/image_admin"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+
+            <!-- Add more ImageButtons as needed -->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,208 @@
+<!-- item_sach.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/reLayout1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/round_back_borders">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:id="@+id/rlTenSanPham">
+            <ImageButton
+                android:id="@+id/btnBackChiTietLoaiMatHang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/image_back"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+            <TextView
+                android:id="@+id/textViewTenSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:textColor="@color/white"
+                android:text="Giày fink - mẫu 1"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlThongTin1SanPham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_below="@id/rlTenSanPham">
+
+            <!-- Thêm hình ảnh sách -->
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/rlImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp">
+                <ImageView
+                    android:id="@+id/imageViewAnhSanPham"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_giay"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:layout_below="@id/rlThongTin1SanPham">
+    <TextView
+        android:id="@+id/textViewGiaSanPham"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="Giá SP: 15$"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <!-- Thêm hình ảnh giỏ hàng -->
+</RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+
+        android:background="@drawable/rounded_background_menu"
+        android:id="@+id/rlMuaHang">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMuaSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="deleteClicked"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@color/black"
+                android:text="Mua Hàng"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/reLayout2"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/reLayout1"
+        android:background="@drawable/round_back_borders"
+        android:layout_above="@id/rlMuaHang">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN SẢN PHẨM"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <RelativeLayout
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_back_borders">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
+
+            <TextView
+                android:id="@+id/textViewTenSanPham1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên sp: Đắc nhân tâm"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/textViewLoaiSanPham1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loai sp: "
+                    android:layout_marginTop="20dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/textViewMieuTa1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Miêu tả: "
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/textViewSoLuong1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Số lượng"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

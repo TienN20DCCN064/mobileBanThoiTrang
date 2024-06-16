@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="80dp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bán Hàng Thời Trang"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+
+        android:gravity="center_horizontal"
+        />
+    <!-- 1dp co the chua 1 hoạc nhieu pixel    -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:src="@drawable/nendangnhap"
+        android:layout_gravity="center"/>
+    <TextView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+
+        android:gravity="center_horizontal"
+        />
+
+    <!--    maxlines: số lượng dòng tối đa, =1: không cho xuống dòng-->
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_back_dark_blue"
+        android:hint="Tài khoản"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_back_dark_blue"
+            android:hint="Mật khẩu"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16dp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            />
+        <!--        hình ảnh sẽ được co giãn hoặc co lại sao cho tỷ lệ khung hình ban đầu được bảo tồn, và không bị kéo dãn hoặc ép buộc vào kích thước ImageView.-->
+        <ImageView
+            android:id="@+id/ivHienMK"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/hide"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        >
+        <CheckBox
+            android:id="@+id/chkLuuMK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu mật khẩu"
+            android:layout_marginRight="100dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/tvQuenMK"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quên mật khẩu"
+
+            android:textColor="@color/purple_700"/>
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_back_blue"
+        android:text="Đăng nhập"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa có tài khoản, "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tvDangKy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Đăng ký"
+            android:textColor="@color/blue1"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

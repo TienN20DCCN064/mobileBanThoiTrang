@@ -1,0 +1,88 @@
+<!-- item_sach.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/round_back_borders">
+        <RelativeLayout
+            android:id="@+id/rlThongTin1SanPham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp">
+
+            <!-- Thêm hình ảnh sách -->
+            <RelativeLayout
+                android:id="@+id/rlImageButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+                <ImageButton
+                    android:id="@+id/imageButtonSanPham"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="centerCrop"
+                    android:onClick="itemClicked"
+                    android:src="@drawable/image_menu1"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="110dp">
+
+            <TextView
+                android:id="@+id/textViewTenSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sản phẩm: Giày Lười"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewLoaiSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loai: Giày Dép"
+                android:textSize="16sp"/>
+            <!-- Thêm các thông tin sách khác -->
+            <TextView
+                android:id="@+id/textViewMieuTaSanPham"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Miêu tả: Giành cho nam và nữ"
+                android:textSize="16sp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textViewGiaSanPham"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giá : 10$"
+                    android:textColor="@color/red"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+                <!-- Thêm hình ảnh giỏ hàng -->
+                <ImageButton
+                    android:id="@+id/btnThemVaoGioHang"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="230dp"
+                    android:src="@drawable/image_gio_hang_them"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:onClick="buttonClicked"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

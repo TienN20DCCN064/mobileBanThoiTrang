@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/round_grey">
+
+    <LinearLayout
+        android:id="@+id/llThanhToan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/image_gio_hang"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:id="@+id/thanhToan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:text="Thanh Toán"
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTongTien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llThanhToan"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp">
+
+       <TextView
+           android:id="@+id/textViewTongTien"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Tổng tiền là : "
+           android:textSize="30dp"
+           />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlXoa_Mua_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTongTien"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/butTonThanhToan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_button_purple_small"
+            android:text="Thanh toán"
+            android:textColor="@color/white"
+            />
+
+
+    </RelativeLayout>
+
+
+    <!-- res/layout/activity_main.xml -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:id="@+id/menuButon"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_background_menu">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="35dp"
+                android:background="@null"
+                android:onClick="buttonClicked"
+                android:scaleType="fitCenter"
+                android:src="@drawable/image_home" />
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/search_icon"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+            <ImageButton
+                android:id="@+id/btnGioHang"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/image_gio_hang"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+            <ImageButton
+                android:id="@+id/btnInformation"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="45dp"
+                android:src="@drawable/image_admin"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:onClick="buttonClicked"/>
+
+            <!-- Add more ImageButtons as needed -->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

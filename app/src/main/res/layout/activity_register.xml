@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BÁN SÁCH ONLINE"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+
+        android:gravity="center_horizontal"
+        />
+    <!-- 1dp co the chua 1 hoạc nhieu pixel    -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+
+        android:layout_gravity="center"
+        android:src="@drawable/nendangnhap" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng kí"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtTK"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Tài khoản của bạn"
+        android:background="@drawable/round_back_dark_blue"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        />
+
+    <EditText
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Email của bạn"
+        android:background="@drawable/round_back_dark_blue"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:textSize="16sp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        />
+
+<!--    maxlines: số lượng dòng tối đa, =1: không cho xuống dòng-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/edtPass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_back_dark_blue"
+            android:hint="Mật khẩu"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16dp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            />
+<!--        hình ảnh sẽ được co giãn hoặc co lại sao cho tỷ lệ khung hình ban đầu được bảo tồn, và không bị kéo dãn hoặc ép buộc vào kích thước ImageView.-->
+        <ImageView
+            android:id="@+id/ivHienMK1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/hide"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp">
+        <EditText
+            android:id="@+id/edtRepass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_back_dark_blue"
+            android:hint="Nhập lại mật khẩu"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16dp"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            />
+        <!--        hình ảnh sẽ được co giãn hoặc co lại sao cho tỷ lệ khung hình ban đầu được bảo tồn, và không bị kéo dãn hoặc ép buộc vào kích thước ImageView.-->
+        <ImageView
+            android:id="@+id/ivHienMK2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/hide"
+            android:layout_marginEnd="20dp"
+            android:adjustViewBounds="true"
+            />
+
+
+    </RelativeLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+
+<!--        >-->
+<!--        <CheckBox-->
+<!--            android:id="@+id/chkLuuMK"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Lưu mật khẩu"-->
+<!--            android:layout_marginRight="100dp"-->
+<!--            android:layout_weight="1"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvQuenMK"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Quên mật khẩu"-->
+
+<!--            android:textColor="@color/purple_700"/>-->
+<!--    </LinearLayout>-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDangky"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_back_blue"
+        android:text="Đăng ký"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn đã có tài khoản, "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tvDangnhap"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Đăng nhập"
+            android:textColor="@color/blue1"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

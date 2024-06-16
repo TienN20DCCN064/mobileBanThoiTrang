@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/listGioDang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/list_danhSachGioHang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <CheckBox
+                android:id="@+id/checkBoxChon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="3dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewSanPham"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="35dp"
+                android:src="@drawable/sach_dac_nhan_tam1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="130dp">
+
+
+                <TextView
+                    android:id="@+id/textViewTenSanPham"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên : "
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewGiaBanSanPham"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Giá"
+                    android:textColor="@color/red"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shoppe_button_background">
+
+                    <!-- Button with minus icon -->
+                    <ImageButton
+                        android:id="@+id/btnMinus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/minus_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"/>
+                    <!-- TextView to display quantity -->
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="36dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvSoLuong1SpTrongGio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="30dp" />
+                    </RelativeLayout>
+                    <ImageButton
+                        android:id="@+id/btnPlus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/plus_icon"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"/>
+
+                </RelativeLayout>
+
+
+
+                <!-- Thêm các thông tin sách khác tương tự ở đây -->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

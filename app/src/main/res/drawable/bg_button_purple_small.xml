@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="10dp" /> <!-- Điều chỉnh giá trị radius để tạo độ cong cho góc -->
+    <solid android:color="@color/purple_700" /> <!-- Màu nền của bo góc -->
+</shape>

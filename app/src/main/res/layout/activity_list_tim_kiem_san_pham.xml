@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/round_grey">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:onClick="buttonClicked"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="  TÌM KIẾM SẢN PHẨM"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/chuDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:text="Tìm kiếm : "
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvTimKiemTheo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/listbtnMenu"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        >
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_background_menu">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="35dp"
+                    android:background="@null"
+                    android:onClick="buttonClicked"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/image_home" />
+
+                <ImageButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="45dp"
+                    android:src="@drawable/search_icon"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:onClick="buttonClicked"/>
+                <ImageButton
+                    android:id="@+id/btnGioHang"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="45dp"
+                    android:src="@drawable/image_gio_hang"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:onClick="buttonClicked"/>
+                <ImageButton
+                    android:id="@+id/btnInformation"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="45dp"
+                    android:src="@drawable/image_admin"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:onClick="buttonClicked"/>
+
+                <!-- Add more ImageButtons as needed -->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chuDe"
+        android:layout_above="@id/listbtnMenu">
+        <ListView
+            android:id="@+id/listViewSanPhamTimKiem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
